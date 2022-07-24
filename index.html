@@ -9,19 +9,23 @@
         <script src="scripts.js"></script>
     </head>
     <body>
-        <div class="bg-[#0F2A38] grid grid-rows-2 grid-col-3 h-screen">
+        <div class="bg-[#0F2A38] grid grid-rows-5 grid-col-3 h-screen">
             <!-- This div is for the top box -->
-            <div class="bg-[#1D3C43] p-8 m-2 rounded-lg row-span-1 col-span-3 "> 
-                <h1>Box 1</h1>
-                <button onclick="sortSelectionText()">Click Here!</button>
-                <p id="SortTextDisplay"></p>
+            <div class="bg-[#1D3C43] p-8 m-2 rounded-lg row-span-3 col-span-3">
+                <div class="grid grid-rows-6 h-full">
+                    <div class="row-span-1">
+                        <h1 class="text-2xl text-center align-middle">Title</h1>
+                    </div>
+                    <button onclick="sortSelectionText()">Click Here!</button>
+                    <p id="SortTextDisplay"></p>
+                </div>
             </div>
             <!-- This div is for the bot-left box -->
-            <div class="bg-[#1D3C43] p-8 m-2 rounded-lg">
+            <div class="bg-[#1D3C43] p-8 m-2 rounded-lg row-span-4">
                 <h1>Box 2</h1>
             </div>
             <!-- This div is for the bot-right box -->
-            <div class="bg-[#1D3C43] p-8 m-2 rounded-lg col-span-2">
+            <div class="bg-[#1D3C43] p-8 m-2 rounded-lg row-span-4 col-span-2">
                 <h1>Box 3</h1>
             </div>
         </div>
