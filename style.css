@@ -8,6 +8,8 @@ body {
     height: 100vh;
     gap: 1rem;
     background-color: #0f2a38;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: minmax(100px, auto);
     grid-template-areas:
     'a a a'
     'a a a'
@@ -16,6 +18,8 @@ body {
     'b c c'
     'b c c'
     'b c c'
+
+    
 }
 
 .box-top {
@@ -23,6 +27,21 @@ body {
     border-radius: 35px;
     padding: 25px;
     background-color: #1d3c43;
+
+    display: grid;
+    grid-template-areas:
+    'd'
+    'e'
+    'e'
+    'e' 
+}
+
+.bt-1 {
+    grid-area: d;
+}
+
+.bt-2 {
+    grid-area: e;
 }
 
 .box-left {
@@ -35,7 +54,7 @@ body {
     padding: 25px;
     background-color: #1d3c43;
 }
-
+/*Might not need padding if I use gap in parent*/
 .bl-1 {
     padding: 5px;
 }
@@ -46,6 +65,11 @@ body {
 
 .box-right {
     grid-area: c;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
     border-radius: 35px;
     padding: 25px;
     background-color: #1d3c43;
