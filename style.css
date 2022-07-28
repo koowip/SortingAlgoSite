@@ -9,7 +9,7 @@ body {
     gap: 1rem;
     background-color: #0f2a38;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: minmax(100px, auto);
+    grid-template-rows: repeat(7, 1fr);
     grid-template-areas:
     'a a a'
     'a a a'
@@ -47,7 +47,8 @@ body {
 .box-left {
     grid-area: b;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-evenly;
     border-radius: 35px;
@@ -66,30 +67,55 @@ body {
 
 .box-right {
     grid-area: c;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
     gap: 1rem;
     border-radius: 35px;
     padding: 25px;
     background-color: #1d3c43;
+
+    display: grid;
+    grid-template-columns: 1;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas: 
+    'f'
+    'g'
+    'g'
+    'g'
 }
 
+.br-1 {
+    grid-area: f;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
 
+.br-2 {
+    grid-area: g;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    gap: 2rem;
+}
 
 /* CSS */
 .button-custom {
-  background-image: linear-gradient(-180deg, #37AEE2 0%, #1E96C8 100%);
-  border-radius: .5rem;
+  background-image: linear-gradient(-180deg, #0f2a38 0%, #173a58 100%);
+  border-radius: 5rem;
   box-sizing: border-box;
   color: #FFFFFF;
   display: flex;
   font-size: 16px;
   justify-content: center;
-  padding: 1rem 1.75rem;
+  align-items: center;
+  /* padding: 1rem 1.75rem; */
+  padding: 20px;
+  margin: 10px;
   text-decoration: none;
-  width: 100%;
+  height: 50px;
+  width: 150px;
   border: 0;
   cursor: pointer;
   user-select: none;
@@ -98,11 +124,19 @@ body {
 }
 
 .button-custom:hover {
-  background-image: linear-gradient(-180deg, #1D95C9 0%, #17759C 100%);
+  background-image: linear-gradient(-180deg, #173a58  0%, #0f2a38 100%);
 }
 
 @media (min-width: 768px) {
   .button-custom {
     padding: 1rem 2rem;
   }
+}
+
+
+.slider {
+    background: #173a58;
+    border-radius: 5px;
+    width: 50%;
+    height: 15px;
 }
