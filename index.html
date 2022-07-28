@@ -10,13 +10,13 @@
     <body>
         <div class="grid-background">
             <div class="box-top">
-                <div class="bt-1">Top text</div>
+                <div class="bt-1" id="title">Select Sorting Algo Below!</div>
                 <div class="bt-2">Array to sort goes here</div>
             </div>
 
             <div class="box-left">
-                <div class="bl-1">Example text of Algo and stuff</div>
-                <div class="bl-2">Big O notation of Algo</div>
+                <div class="bl-1" id="expoTextForAlgo">Example text of Algo and stuff</div>
+                <div class="bl-2" id="bigONotationForAlgo">Big O notation of Algo</div>
             </div>
             
             <div class="box-right">
@@ -24,7 +24,7 @@
                     <input class="slider" type="range" value="100" min="10" max="500" step="5">
                 </div>
                 <div class="br-2">
-                    <button class="button-custom" role="button">Button</button>
+                    <button class="button-custom" role="button" onclick="quickSort()">Quick Sort</button>
                     <button class="button-custom" role="button">Button</button>
                     <button class="button-custom" role="button">Button</button>
                     <button class="button-custom" role="button">Button</button>
